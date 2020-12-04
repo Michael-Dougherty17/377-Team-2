@@ -222,3 +222,41 @@ textarea {
   overflow: auto;
   resize: vertical;
 }
+
+.wrapper {
+    max-height: 70%;
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    border: 1px #ccc;
+}
+
+.container {
+ position: relative;   
+ display: flex;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ justify-content: space-between;
+ max-width: 500px;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.destintaion {
+    display: flex;
+    margin-right: 5px;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: 20%;
+}
+
+.route {
+    display: flex;
+    margin-right: 5px;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: 20%;
+}
