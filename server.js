@@ -26,14 +26,24 @@ app.route('/api')
     console.log('Fetch request data', json);
   })
   .post(async (req, res) => {
+    var request = new XMLHttpRequest();
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
 
-    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    request.open('GET', 'https://api.umd.io/v1/bus/routes', true);
+    request.onload = function() {
+
+      var data = JSON.parse(this.response)
+      console.log('DONE')
+    } 
+
+    const data = await fetch('https://api.umd.io/v1/bus/routes');
     const json = await data.json();
     console.log('data from fetch', json);
     res.json(json);
   });
+
+  
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
