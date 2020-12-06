@@ -10,15 +10,16 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <nav class="navbar has-shadow is-white">
+            <!--Navigation bar-->
+            <nav class="navbar has-shadow">
                 <div class="navbar-brand">
                     <a class="navbar-item">
                         <img src="images/testudo.jpg" alt="testudo" style="max-height: 70px" class="py-2 px-2 start">
                     </a>
                     <a class="navbar-burger" id="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
                     </a>
                 </div>
                 <div class="navbar-menu" id="nav-links">
@@ -29,19 +30,22 @@
                     </div>
                 </div>
             </nav>
-            <div class="destination">
-                <h3 class="is-size-5">Enter Route Information</h3>
-                <h4>Route Start</h4>
-                <input type="text" id="start" name="start" />
-                <h4>Route End</h4>
-                <input type="text" id="end" name="end" />
-            </div>
-            <div class="route">
-                <h3>Route Name</h3>
-                <h4>Route Start</h4>
-                <p>00:00</p>
-                <h4>Route End</h4>
-                <p>00:00</p>
+            <!--Columns for destination and route times-->
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <h3 class="is-size-5 title mt-6">Enter Route Information</h3>
+                    <h4>Route Start</h4>
+                    <input type="text" id="start" name="start" />
+                    <h4>Route End</h4>
+                    <input type="text" id="end" name="end" />
+                </div>
+                <div class="column has-text-centered">
+                    <h3 class="is-size-5 title mt-6">Route Name</h3>
+                    <h4>Route Start</h4>
+                    <p>00:00</p>
+                    <h4>Route End</h4>
+                    <p>00:00</p>
+                </div>
             </div>
         </div>
     </div>
