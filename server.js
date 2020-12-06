@@ -30,13 +30,6 @@ app.route('/api')
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
 
-    request.open('GET', 'https://api.umd.io/v1/bus/routes', true);
-    request.onload = function() {
-
-      var data = JSON.parse(this.response)
-      console.log('DONE')
-    } 
-
     const data = await fetch('https://api.umd.io/v1/bus/routes');
     const json = await data.json();
     console.log('data from fetch', json);
