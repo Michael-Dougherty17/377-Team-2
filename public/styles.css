@@ -1,7 +1,19 @@
-.navbar-item, .navbar-burger, .navbar-brand, .topnav {
-    background-color: #CF102D;
+.navbar-item,
+.navbar-menu,
+.navbar-burger,
+.navbar-brand,
+.topnav,
+.body {
+  background-color: #cf102d;
+  color: #ffcd23;
 }
 
-.span, .navbar-item {
-    color:#FFCD23;
+.span,
+.navbar-item {
+  color: #ffcd23;
 }
+
+.column {
+    background-color: #cf102d;
+}
+
