@@ -21,19 +21,20 @@ app.use((req, res, next) => {
 });
 
 app.route('/api')
-  .get(async (req, res) => {
-    console.log('GET request detected');
-    console.log('Fetch request data', json);
-  })
-  .post(async (req, res) => {
-    console.log('POST request detected');
-    console.log('Form data in res.body', req.body);
-
+  .get((req, res) => {
     const data = await fetch('https://api.umd.io/v1/bus/routes');
     const json = await data.json();
-    console.log('data from fetch', json);
     res.json(json);
-  });
+  })
+  //.post(async (req, res) => {
+    //console.log('POST request detected');
+    //console.log('Form data in res.body', req.body);
+
+    //const data = await fetch('https://api.umd.io/v1/bus/routes');
+    //const json = await data.json();
+    //console.log('data from fetch', json);
+    //res.json(json);
+  //});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
