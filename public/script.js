@@ -15,8 +15,6 @@ fetch(busData)
     .then((blob) => blob.json())
     .then((data) => buses.push(...data));
 
-<<<<<<< Updated upstream
-=======
 async function main() {
   try {
     //load bus data
@@ -35,4 +33,3 @@ async function main() {
   }
 }
 window.onload = main;
->>>>>>> Stashed changes
