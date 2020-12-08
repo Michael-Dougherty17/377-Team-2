@@ -1,4 +1,3 @@
-// These are our required libraries to make the server work.
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import express from 'express';
@@ -22,9 +21,11 @@ app.use((req, res, next) => {
 
 app.route('/api')
   .get(async (req, res) => {
-    console.log('GET request detected');
-    console.log('Fetch request data', json);
+    const data = await fetch('https://api.umd.io/v1/bus/routes');
+    const json = await data.json();
+    res.json(json);
   })
+  
   .post(async (req, res) => {
     var request = new XMLHttpRequest();
     console.log('POST request detected');

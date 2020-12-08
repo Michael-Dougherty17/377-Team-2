@@ -13,12 +13,10 @@ async function main() {
     const data = await fetch(busData);
     const buses = await data.json();
     console.log(buses);
-
     //generate li, inject into select element
     //name attrib and value for each
     //labs 5+6
     //use button to fire event or submission event lisener on form
-
     //fetch stop list from api, then store the stops in a "thing" so that we 
     //can search via title(since api doesnt allow for search by title) ourselves and then get the stop id and return that to the api to
     //get estimated arrival times
@@ -28,4 +26,5 @@ async function main() {
     console.log(error);
   }
 }
+
 window.onload = main;
