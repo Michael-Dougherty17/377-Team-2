@@ -1,24 +1,16 @@
 //mobile dropdown
-const burgerIcon = document.querySelector('#burger');
-const navbarMenu = document.querySelector('#nav-links');
+const burgerIcon = document.querySelector("#burger");
+const navbarMenu = document.querySelector("#nav-links");
 
-burgerIcon.addEventListener('click', () => {
-    navbarMenu.classList.toggle('is-active');
-})
-
-//load bus data
-const busData = "https://api.umd.io/v1/bus/routes";
-
-const buses = [];
-
-fetch(busData)
-    .then((blob) => blob.json())
-    .then((data) => buses.push(...data));
+burgerIcon.addEventListener("click", () => {
+  navbarMenu.classList.toggle("is-active");
+});
 
 async function main() {
   try {
     //load bus data
-    const busData = "https://api.umd.io/v1/bus/routes/104";
+
+    const busData = "https://api.umd.io/v1/bus/routes";
     const data = await fetch(busData);
     const buses = await data.json();
     console.log(buses);
@@ -32,4 +24,5 @@ async function main() {
     console.log(error);
   }
 }
+
 window.onload = main;
