@@ -27,6 +27,7 @@ app.route('/api')
   })
   
   .post(async (req, res) => {
+    var request = new XMLHttpRequest();
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
 
@@ -35,6 +36,8 @@ app.route('/api')
     console.log('data from fetch', json);
     res.json(json);
   });
+
+  
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
