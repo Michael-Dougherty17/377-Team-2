@@ -1,262 +1,42 @@
-/* stylelint-disable selector-list-comma-newline-after */
+.navbar-item,
+.navbar-menu,
+.navbar-burger,
+.navbar-brand,
+.topnav {
+  background-color: #cf102d;
+  color: #ffcd23;
+}
 
-/*                                          LINES 4 - 108 ARE FOR BLOG THEME
-.blog-header {
-    line-height: 1;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  
-  .blog-header-logo {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-    font-size: 2.25rem;
-  }
-  
-  .blog-header-logo:hover {
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  }
-  
-  .display-4 {
-    font-size: 2.5rem;
-  }
-  @media (min-width: 768px) {
-    .display-4 {
-      font-size: 3rem;
-    }
-  }
-  
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-  
-  .nav-scroller .nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .nav-scroller .nav-link {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: .875rem;
-  }
-  
-  .card-img-right {
+.body {
+  background-color: black;
+}
+
+.span,
+.navbar-item {
+  color: #ffcd23;
+}
+
+#column1,
+#column2 {
+  background-color: #ffffff;
+}
+
+#column1 {
+  margin-left: 150px;
+  margin-right: 0.5px;
+
+
+}
+
+#column2 {
+  margin-right: 150px;
+  margin-left: 0.5px;
+}
+
+.column {
+  margin-top: 50px;
+}
+
+html, body {
     height: 100%;
-    border-radius: 0 3px 3px 0;
-  }
-  
-  .flex-auto {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-  }
-  
-  .h-250 { height: 250px; }
-  @media (min-width: 768px) {
-    .h-md-250 { height: 250px; }
-  }
-  
-  /* Pagination */
-  /*
-  .blog-pagination {
-    margin-bottom: 4rem;
-  }
-  .blog-pagination > .btn {
-    border-radius: 2rem;
-  }
-  */
-  /*
-   * Blog posts
-   *
-  .blog-post {
-    margin-bottom: 4rem;
-  }
-  .blog-post-title {
-    margin-bottom: .25rem;
-    font-size: 2.5rem;
-  }
-  .blog-post-meta {
-    margin-bottom: 1.25rem;
-    color: #999;
-  }
-  
-  /*
-   * Footer
-   *
-  .blog-footer {
-    padding: 2.5rem 0;
-    color: #999;
-    text-align: center;
-    background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
-  }
-  .blog-footer p:last-child {
-    margin-bottom: 0;
-  }
-
-/*                                           GRID THEME
-  .themed-grid-col {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: rgba(86, 61, 124, .15);
-    border: 1px solid rgba(86, 61, 124, .2);
-  }
-  
-  .themed-container {
-    padding: 15px;
-    margin-bottom: 30px;
-    background-color: rgba(0, 123, 255, .15);
-    border: 1px solid rgba(0, 123, 255, .2);
-  }
-                                                
-  */
-
-  html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  
-  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-    display: block;
-  }
-  
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-
-  button {
-    border-radius: 0;
-  }
-  
-  button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-  }
-
-  input,
-button,
-select,
-optgroup,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button,  /* Not sure what the differene between button input and seelecet is but we can play around with that */
-input {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-[role="button"] {   /*interactive buttons*/
-  cursor: pointer;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-button:not(:disabled),   /*not sure what this and button moz-focus-inner does*/
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-  resize: vertical;
-}
-
-.wrapper {
-    max-height: 70%;
-    display: flex;
-    width: 50%;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    border: 1px #ccc;
-}
-
-.container {
- position: relative;   
- display: flex;
- flex-wrap: wrap;
- align-items: flex-start;
- justify-content: space-between;
- max-width: 500px;
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.destintaion {
-    display: flex;
-    margin-right: 5px;
-    flex-direction: column;
-    flex: 0 1 auto;
-    width: 20%;
-}
-
-.route {
-    display: flex;
-    margin-right: 5px;
-    flex-direction: column;
-    flex: 0 1 auto;
-    width: 20%;
 }
