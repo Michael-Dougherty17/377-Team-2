@@ -9,6 +9,7 @@ burgerIcon.addEventListener("click", () => {
 async function main() {
   try {
     //load bus data
+
     const busData = "https://api.umd.io/v1/bus/routes";
     const data = await fetch(busData);
     const buses = await data.json();
@@ -23,4 +24,5 @@ async function main() {
     console.log(error);
   }
 }
+
 window.onload = main;
