@@ -12,7 +12,29 @@ async function main() {
     const busData = "https://api.umd.io/v1/bus/stops";
     const data = await fetch(busData);
     const buses = await data.json();
-    console.log(buses);
+    //console.log(buses);
+    for (let i = 0; i < buses.length; i++) {
+
+      //console.log(buses[i].title)
+
+      if(buses[i].title == "La Plata Hall"){
+        //console.log(buses[i].stop_id);
+        let results = buses[i].stop_id;
+        console.log(results);
+        const arrivalTime = `https://api.umd.io/v1/bus/stops/${results}`;
+        const dataTwo = await fetch(arrivalTime);
+        const arrival = await dataTwo.json();
+        console.log(arrival);
+      }
+
+      //lines 105+ in lab 5 to select user input and use that as arguement instead of hard coding line 20
+
+      
+
+
+      
+
+    }
     //generate li, inject into select element
     //name attrib and value for each
     //labs 5+6
