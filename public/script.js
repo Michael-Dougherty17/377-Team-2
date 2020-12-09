@@ -26,5 +26,4 @@ async function main() {
     console.log(error);
   }
 }
-
 window.onload = main;

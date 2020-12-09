@@ -22,21 +22,29 @@
 }
 
 #column1 {
-  margin-left: 150px;
+  
   margin-right: 0.5px;
 
 
 }
 
 #column2 {
-  margin-right: 150px;
+  
   margin-left: 0.5px;
 }
 
 .column {
-  margin-top: 50px;
+  
+  margin: 50px;
 }
 
 html, body {
     height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        margin: 50px 0;
+      }
+      
 }
