@@ -1,0 +1,52 @@
+.navbar-item,
+.navbar-menu,
+.navbar-burger,
+.navbar-brand,
+.topnav {
+  background-color: #cf102d;
+  color: #ffcd23;
+}
+
+.body {
+  background-color: black;
+}
+
+.span,
+.navbar-item {
+  color: #ffcd23;
+}
+
+#column1,
+#column2 {
+  background-color: #ffffff;
+}
+
+#column1 {
+  
+  margin-right: 0.5px;
+
+
+}
+
+#column2 {
+  
+  margin-left: 0.5px;
+}
+
+.column {
+  
+  margin: 50px;
+}
+
+html, body {
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        margin: 50px 0;
+      }
+      
+}
+
+  
