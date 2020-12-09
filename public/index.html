@@ -48,7 +48,11 @@
           <input type="text" id="start" name="start" />
           <h4>Route End</h4>
           <input type="text" id="end" name="end" />
+          <button onclick = "testFunction()" type = "button" id = "activate" name = "activate"> Activate </button>
         </div>
+
+        
+
         <div class="column has-text-centered" id="column2">
           <h3 class="is-size-5 title mt-6">Route Name</h3>
           <h4>Route Start</h4>
@@ -59,5 +63,15 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+
+      function testFunction() {
+
+        const startInput = document.getElementById('start').value;
+        const endInput = document.getElementById('end').value;
+
+        //how to send data to backend and work with it and then send data back to front end so I can change lines 59 and 61 with said data
+      }
+    </script>
   </body>
 </html>
