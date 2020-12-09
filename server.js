@@ -1,4 +1,3 @@
-// These are our required libraries to make the server work.
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import express from 'express';
@@ -22,18 +21,23 @@ app.use((req, res, next) => {
 
 app.route('/api')
   .get(async (req, res) => {
-    console.log('GET request detected');
-    console.log('Fetch request data', json);
+    const data = await fetch('https://api.umd.io/v1/bus/routes');
+    const json = await data.json();
+    res.json(json);
   })
+  
   .post(async (req, res) => {
+    var request = new XMLHttpRequest();
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
 
-    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    const data = await fetch('https://api.umd.io/v1/bus/routes');
     const json = await data.json();
     console.log('data from fetch', json);
     res.json(json);
   });
+
+  
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
