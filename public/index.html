@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="body">
     <div class="wrapper">
@@ -43,15 +48,18 @@
       <!--Columns for destination and route times-->
       <div class="columns">
         <div class="column has-text-centered" id="column1">
-          <h3 class="is-size-5 title mt-6">Enter Route Information</h3>
-          <h4>Route Start</h4>
-          <input type="text" id="start" name="start" />
-          <h4>Route End</h4>
-          <input type="text" id="end" name="end" />
-          <button onclick = "testFunction()" type = "button" id = "activate" name = "activate"> Activate </button>
+          <form class="routeInfo">
+
+            <h3 class="is-size-5 title mt-6">Enter Route Information</h3>
+            <h4>Route Start</h4>
+            <input type="text" id="start" name="start" />
+            <h4>Route End</h4>
+            <input type="text" id="end" name="end" />
+            <button type = "submit" id = "activate" name = "activate"> Submit </button>
+          </form>
         </div>
 
-        
+      <!-- inputs and buttons go inside form with a class name -->
 
         <div class="column has-text-centered" id="column2">
           <h3 class="is-size-5 title mt-6">Route Name</h3>
