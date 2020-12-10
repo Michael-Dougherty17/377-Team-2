@@ -27,6 +27,15 @@ async function main() {
         console.log(arrival);
       }
 
+      function testFunction() {
+
+        const startInput = document.getElementById('start').value;
+        const endInput = document.getElementById('end').value;
+        console.log(startInput);
+
+        //how to send data to backend and work with it and then send data back to front end so I can change lines 59 and 61 with said data
+      }
+
       //lines 105+ in lab 5 to select user input and use that as arguement instead of hard coding line 20
 
       
