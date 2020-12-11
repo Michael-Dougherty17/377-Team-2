@@ -17,11 +17,13 @@ async function main() {
     const routeData = "https://api.umd.io/v1/bus/routes";
     const data = await fetch(routeData);
     const routes = await data.json();
+    console.log(routes);
     
     //load array of stops. this includes stop id and stop title
     const stopData = "https://api.umd.io/v1/bus/stops";
     const dataTwo = await fetch(stopData);
     const stopArray = await dataTwo.json();
+    console.log(stopArray);
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -30,6 +32,8 @@ async function main() {
       const endInput = formData[1].value;
       noMoreThanOne = 0;
       //gets user input to the script so I can now utilize user input in the eventListener
+      console.log(startInput);
+      console.log(endInput);
       
       for (let j = 0; j < stopArray.length; j++) { //goes thru the array of stops and mathces the user input(stop title) to stop id
 
@@ -41,9 +45,9 @@ async function main() {
           endInputID = stopArray[j].stop_id;
         }
       }
-      console.log(stopArray);
-      //console.log(startInputID); 
-      //console.log(routes);
+      //console.log(stopArray);
+      console.log(startInputID);
+      console.log(endInputID);
       for (let i = 0; i < routes.length; i++) { //goes thru each element in the route array
 
         cashNow = 0;
@@ -77,7 +81,11 @@ async function main() {
       }
 
       console.log(myRoute);
-      console.log(cashNow);
+      //console.log(cashNow);
+      const startArrivalData = `https://api.umd.io/v1/bus/routes/${myRoute}/arrivals/${startInputID}`;
+      const dataFour = await fetch (startArrivalData);
+      const useableArrivalData = await dataFour.json();
+      console.log(useableArrivalData);
     })
   } 
   
@@ -85,5 +93,4 @@ async function main() {
     console.log(error);
   }
 }
-
 window.onload = main;
