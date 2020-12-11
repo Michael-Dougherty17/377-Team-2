@@ -17,6 +17,7 @@ async function main() {
     const routeData = "https://api.umd.io/v1/bus/routes";
     const data = await fetch(routeData);
     const routes = await data.json();
+    
     const stopData = "https://api.umd.io/v1/bus/stops";
     const dataTwo = await fetch(stopData);
     const stopArray = await dataTwo.json();
@@ -46,18 +47,23 @@ async function main() {
         const dataThree = await fetch(routeData);
         const useableRouteData = await dataThree.json();
         let stopIDArray = useableRouteData[0].stops;
+        console.log(stopIDArray);
 
-        for (let n = 0; n < stopIDArray.length; n++) {
+        // for (let n = 0; n < stopIDArray.length; n++) {
 
-          if (stopIDArray[n] == startInputID) {
-            cashNow += 1;
-          }
+        //   if (stopIDArray[n] == startInputID) {
+        //     cashNow += 1;
+        //   }
           
-          if (stopIDArray[n] == endInputID) {
-            cashNow += 1;
-          }
+        //   if (stopIDArray[n] == endInputID) {
+        //     cashNow += 1;
+        //   }
 
-        }
+        // }
+        //still a problem with line 47. it might be beacause variables from the promise chain are being used in the nested for loop
+        //and the promise chain isn't over yet. 
+        //or we might have to make a matrix of routes and their stops and iterate thru that so i dont have to call the api in a 
+        //for loop.
         
         if (noMoreThanOne == 0 && cashNow == 2) {
 
