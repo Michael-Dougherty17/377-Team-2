@@ -17,26 +17,40 @@
 }
 
 #column1,
-#column2 {
+#column2, #column3 {
   background-color: #ffffff;
 }
 
 #column1 {
-  margin-left: 150px;
+  
   margin-right: 0.5px;
 
 
 }
 
 #column2 {
-  margin-right: 150px;
+  
   margin-left: 0.5px;
 }
 
 .column {
-  margin-top: 50px;
+  
+  margin: 50px;
 }
 
 html, body {
     height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .column {
+        margin: 50px 0;
+      }
+      
+}
+
+#column3 {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #ffffff
 }
