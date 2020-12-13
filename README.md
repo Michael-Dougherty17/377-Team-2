@@ -1,15 +1,28 @@
-# 377-Team-2
-Repository for INST377 Final Project
-README (top part of your README.md)
+# Terpbus
 
-Title of your project
-Description of your project
-Link to the Heroku instance where your application can be used
-Description of target browsers (iOS? Android? Which ones? Which versions?)
-Link to User Manual
-Link to Developer Manual
+## README
+Students at UMD have a hard time getting used to the bus schedule when
+they first arrive. The bus apps offered to students are not intuitive
+and do not provide users with everything they need like trip length
+and arrival times. We hope to provide students with a simple and easy
+solution to get where they need to be on time. This app will help them
+manage schedules better and know when they will arrive at their
+destinations.
 
-Developer Manual (bottom half of your README.md)
+### Heroku instance: https://quiet-hollows-47732.herokuapp.com/
+
+### Target browsers: 
+1. Google Chrome for Desktop and Mobile 
+2. iOS Safari for Desktop and Mobile
+
+### User Manual:
+Enter your current stop location and your intended destination. Press start. The app will notify you how long it iwll take the bus to reach your current stop and then how long it will be until you reach your destination.
+
+### Developer Manual: 
+found below
+
+
+## Developer Manual
 
 The audience of this document is future developers who will take over your system.
 They know technical terms and have general knowledge about web applications, but do not have knowledge about your system design.
