@@ -54,3 +54,14 @@ html, body {
   margin-right: 50px;
   background-color: #ffffff
 }
+
+ol {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+}
+
+#doc {
+  text-align: left;
+}
