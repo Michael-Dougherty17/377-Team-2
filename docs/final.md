@@ -5,7 +5,7 @@ Title: TerpBus
 
 Team members: Shasvat Vyas, Michael Dougherty, Ulrich Boudie, Swapnil Goplani
 
-Link to where your app is running: 
+Link to where your app is running:  https://quiet-hollows-47732.herokuapp.com/
 
 Information problem you're trying to solve: Due to the fact that new students at UMD have a hard time getting used to the bus schedule because the current apps are neither intuitive enough nor do they provide them(students) with every thing they need, we aim to put in place a new bus app whixh will solve all these issues.
 
