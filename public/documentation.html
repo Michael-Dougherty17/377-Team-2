@@ -52,10 +52,18 @@
         </p>
         <h4 class="is-size-6 title mt-6" id="doc">Endpoints</h4>
         <p id="doc">
-          The API for your server application - all GET, POST, PUT, etc
-          endpoints, and what they each do
+          To get data from the API we used an async function and retrieved an
+          array of bus routes and bus stops. Then using a PUT method we called
+          the api again with user data from the form. Once the API has been
+          called again using user input, we use a POST method to retrieve the
+          final data from the API by calling it a third time with the data
+          retrieved the second time. After the final data has been retrieved
+          from the API we send it back to the front end to show the user what
+          they need to know.
         </p>
-        <h4 class="is-size-6 title mt-6" id="doc">Bugs and Future Development</h4>
+        <h4 class="is-size-6 title mt-6" id="doc">
+          Bugs and Future Development
+        </h4>
         <p id="doc">
           The main bug with the application currently is displaying information
           to the user from the API. Our team was unable to solve this problem
