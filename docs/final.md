@@ -10,7 +10,7 @@ https://quiet-hollows-47732.herokuapp.com/
 New students at UMD have a hard time getting used to the bus schedule because the current apps are neither intuitive enough nor do they provide students with every thing they need, we aim to put in place a new bus app which will solve these issues.
 
 ### Stakeholders:
-Newly admitted students into the University of Maryland and anyone else who is confused by the University bus system
+Newly admitted students into the University of Maryland and anyone else who is confused by the University bus system.
 
 ### Data:
 We are using data from the UMD.io bus API found at https://beta.umd.io/#tag/bus.
